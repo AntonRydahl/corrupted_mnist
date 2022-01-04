@@ -23,12 +23,12 @@ def train():
 
     # Training Loop
     model.train()
-    epochs = 5
+    epochs = 50
 
     loss_arr = []
     acc_arr = []
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.0025)
     criterion = torch.nn.NLLLoss()
     for epoch in range(epochs):
         train_loss = 0
